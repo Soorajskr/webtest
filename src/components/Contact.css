@@ -1,0 +1,46 @@
+.sect-contact { background: #0E1F38; padding: 90px 5%; }
+.cg { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 40px; }
+.ci { display: flex; gap: 16px; margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.ci:last-of-type { border: none; }
+.ci-ic {
+  width: 46px; height: 46px; border-radius: 6px;
+  background: var(--gold-dim); border: 1px solid var(--gold-border);
+  color: var(--gold); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.ci-l { font-size: 9px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+.ci-v { font-size: 14px; font-weight: 500; color: var(--white); line-height: 1.6; }
+.ci-v a { color: var(--gold2); text-decoration: none; }
+.map-box {
+  background: var(--glass);
+  border: 1px solid var(--gold-border);
+  border-radius: 8px; height: 120px;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 8px;
+  margin-top: 18px; font-size: 13px; color: var(--muted);
+}
+.map-box a { color: var(--gold2); font-size: 12px; font-weight: 600; text-decoration: none; }
+
+.contact-form {
+  background: var(--glass2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; padding: 32px;
+}
+.contact-form .af-title { font-family: var(--font-serif); font-size: 24px; color: var(--white); margin-bottom: 4px; }
+.contact-form .af-sub { font-size: 12px; color: var(--muted); margin-bottom: 22px; }
+.contact-form .fg label { color: var(--muted); }
+.contact-form .fg input,
+.contact-form .fg select,
+.contact-form .fg textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--white);
+}
+.contact-form .fg input:focus,
+.contact-form .fg select:focus,
+.contact-form .fg textarea:focus { border-color: var(--gold); }
+.contact-form .fg select option { background: var(--navy); }
+.contact-form .btn-submit { background: var(--gold); color: var(--navy); }
+.contact-form .btn-submit:hover { background: var(--gold2); }
+
+@media (max-width: 768px) { .cg { grid-template-columns: 1fr; } }

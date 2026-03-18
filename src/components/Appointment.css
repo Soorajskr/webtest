@@ -1,0 +1,28 @@
+.sect-appt {
+  background: radial-gradient(ellipse at 30% 50%, #0F2448 0%, var(--navy) 70%);
+  padding: 90px 5%;
+}
+.appt-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 70px; align-items: center; }
+.appt-left .sh { color: var(--white); }
+.appt-left .sp { color: rgba(255,255,255,0.45); }
+
+.appt-perks { display: flex; flex-direction: column; gap: 14px; }
+.ap { display: flex; align-items: center; gap: 14px; }
+.ap-icon {
+  width: 38px; height: 38px; border-radius: 6px;
+  border: 1px solid var(--gold-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+  background: var(--gold-dim);
+}
+.ap-text { font-size: 14px; color: rgba(255,255,255,0.65); font-weight: 400; }
+
+.appt-form {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 36px;
+}
+.af-title { font-family: var(--font-serif); font-size: 26px; color: var(--navy); margin-bottom: 4px; }
+.af-sub { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+
+@media (max-width: 768px) { .appt-grid { grid-template-columns: 1fr; } }

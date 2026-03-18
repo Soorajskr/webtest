@@ -1,0 +1,35 @@
+.sect-services { background: var(--navy); padding: 90px 5%; }
+.svg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sc {
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 28px;
+  transition: all 0.3s;
+  background: var(--glass);
+}
+.sc:hover { border-color: var(--gold-border); background: var(--gold-dim); transform: translateY(-3px); }
+.sc.feat { background: linear-gradient(135deg, var(--gold), #A07830); border-color: transparent; }
+.sc-icon {
+  width: 48px; height: 48px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.sc.feat .sc-icon { background: rgba(0,0,0,0.15); border-color: rgba(0,0,0,0.1); }
+.sc-name { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.sc.feat .sc-name { color: var(--navy); }
+.sc-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.8; font-weight: 300; }
+.sc.feat .sc-desc { color: rgba(11,22,40,0.7); }
+.sc-tag {
+  display: inline-block; margin-top: 12px;
+  font-size: 9px; font-weight: 700;
+  padding: 3px 10px; border-radius: 2px;
+  background: rgba(255,255,255,0.08);
+  color: var(--gold2);
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.sc.feat .sc-tag { background: rgba(0,0,0,0.15); color: var(--navy); }
+
+@media (max-width: 768px) { .svg-grid { grid-template-columns: 1fr; } }

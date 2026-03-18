@@ -1,0 +1,19 @@
+.sect-why { background: #0E1F38; padding: 90px 5%; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.wc {
+  padding: 32px;
+  border-left: 2px solid var(--gold-border);
+  transition: all 0.3s;
+}
+.wc:hover { border-color: var(--gold); background: var(--gold-dim); }
+.wc-num {
+  font-family: var(--font-serif);
+  font-size: 48px; font-weight: 300;
+  color: var(--gold); opacity: 0.3;
+  line-height: 1; margin-bottom: 12px;
+}
+.wc-title { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.wc-desc { font-size: 13px; color: var(--muted); line-height: 1.8; font-weight: 300; }
+
+@media (max-width: 1024px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }

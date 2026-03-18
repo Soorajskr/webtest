@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #0B1628;
+  --navy2: #112040;
+  --navy3: #1A3060;
+  --gold: #C9A84C;
+  --gold2: #E2C070;
+  --gold3: #F0D898;
+  --gold-dim: rgba(201,168,76,0.12);
+  --gold-border: rgba(201,168,76,0.25);
+  --cream: #FAF7F2;
+  --white: #FFFFFF;
+  --ink: #0B1628;
+  --ink2: #2D4070;
+  --muted: #7A8FAE;
+  --border: rgba(201,168,76,0.15);
+  --glass: rgba(255,255,255,0.04);
+  --glass2: rgba(255,255,255,0.07);
+  --shadow: 0 8px 32px rgba(11,22,40,0.25);
+  --shadow-gold: 0 8px 32px rgba(201,168,76,0.15);
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section wrapper */
+.sw { max-width: 1120px; margin: 0 auto; }
+
+/* Section label */
+.ey {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.ey::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Section heading */
+.sh {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+}
+.sh em { font-style: italic; color: var(--gold2); }
+.sh.dark { color: var(--navy); }
+
+/* Section paragraph */
+.sp {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  max-width: 500px;
+  line-height: 2;
+  margin-bottom: 52px;
+  font-weight: 300;
+}
+.sp.dark { color: var(--ink2); }
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 28px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background: var(--gold2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  padding: 14px 24px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.4);
+  background: var(--glass);
+}
+
+/* Form styles */
+.fg { margin-bottom: 14px; }
+.fg label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+.fg input, .fg select, .fg textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--cream);
+  border: 1px solid rgba(11,22,40,0.12);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--navy);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-color: var(--gold);
+}
+.fg textarea { height: 90px; resize: none; }
+.r2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  border-radius: 3px;
+  border: none;
+  background: var(--navy);
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-submit:hover { background: var(--navy2); }
+
+@media (max-width: 480px) { .r2 { grid-template-columns: 1fr; } }
